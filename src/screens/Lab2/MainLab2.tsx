@@ -11,7 +11,7 @@ const data = {
   name: "Chưa có tên",
   avatar: 'https://cdn-icons-png.flaticon.com/512/1077/1077114.png'
 }
-const colors = ['red', 'white', 'green', 'orange','pink']
+const colors = ['red', 'white', 'green', 'orange', 'pink']
 const MainLab2 = () => {
   const [user, setUser] = useState<User['data']>(data)
   const [footerColor, setFooterColor] = useState(colors[0])
@@ -40,7 +40,7 @@ const MainLab2 = () => {
     setLastTime(dateTime)
   }, [user])
   return (
-    <View  style={{position:'relative',flex:1}}>
+    <View style={{ position: 'relative', flex: 1 }}>
       <Header data={user} />
       <Body onHandleChangeBGFooter={handleFooterColor} onHandleUpdate={onClickUpdate} />
       <Footer backgroundColor={footerColor} timeUpdate={lastTime} />
