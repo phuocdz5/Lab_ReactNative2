@@ -11,7 +11,7 @@ const data = {
   name: "Chưa có tên",
   avatar: 'https://cdn-icons-png.flaticon.com/512/1077/1077114.png'
 }
-const colors = ['red', 'white', 'green', 'orange']
+const colors = ['red', 'white', 'green', 'orange','pink']
 const MainLab2 = () => {
   const [user, setUser] = useState<User['data']>(data)
   const [footerColor, setFooterColor] = useState(colors[0])
