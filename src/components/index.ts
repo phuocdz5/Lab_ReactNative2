@@ -4,6 +4,8 @@ import HeaderComponent from './HeaderComponent';
 import CardComponent from './CardComponent';
 import InputComponent from './InputComponent';
 import ContainerComponent from './ContainerComponent';
+import TextComponent from './TextComponent';
+import ButtonComponent from './ButtonComponent';
 
 export{
     RowComponent,
@@ -11,5 +13,7 @@ export{
     HeaderComponent,
     CardComponent,
     InputComponent,
-    ContainerComponent
+    ContainerComponent,
+    TextComponent,
+    ButtonComponent
 }

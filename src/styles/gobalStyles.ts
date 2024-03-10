@@ -5,6 +5,7 @@ import { FONTFAMILY } from "../../assets/fonts";
 export const gobalStyles = StyleSheet.create({
     container: {
         flex: 1,
+        width:'100%',
         backgroundColor: COLORS.WHITE
     },
     row:{

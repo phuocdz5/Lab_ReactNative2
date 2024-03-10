@@ -1,12 +1,39 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-
-const Body = () => {
-  return (
-    <View>
-      <Text>Body</Text>
-    </View>
-  )
+import React, { useState } from 'react'
+import { Alert, Button, Text, View } from 'react-native'
+import { User } from '../../models/User'
+import { ButtonComponent, ContainerComponent, InputComponent, SectionComponent } from '../../components'
+import { Validate } from '../../utils/validate'
+interface Props {
+    onHandleUpdate: (data: User['data']) => void
+    onHandleChangeBGFooter: () => void
 }
+const Body = React.memo((props: Props) => {
+    const { onHandleUpdate, onHandleChangeBGFooter } = props
+    const [name, setName] = useState('');
+    const [image, setImage] = useState('');
+    const handleUpdateInfo = () => {
+        if (name != null && Validate.image(image)) {
+            onHandleUpdate({ name: name, avatar: image })
+        } else {
+            Alert.alert('Vui lòng điền đúng thông tin')
+        }
+    }
+    return (
+        <View style={{width:395}}>
+            <SectionComponent>
+                <InputComponent placeholder='Nhập tên của bạn' onChange={val => setName(val)} value={name} />
+            </SectionComponent>
+            <SectionComponent>
+                <InputComponent placeholder='Nhập địa chỉ hình ảnh' onChange={val => setImage(val)} value={image} />
+            </SectionComponent>
+            <SectionComponent>
+                <ButtonComponent styles={{ height: 56 }} type='orange' text='Cập nhật thông tin' onPress={handleUpdateInfo} />
+            </SectionComponent>
+            <SectionComponent>
+                <ButtonComponent styles={{ height: 56 }} type='orange' text='Thay đổi màu Footer' onPress={onHandleChangeBGFooter} />
+            </SectionComponent>
+        </View>
+    )
+})
 
 export default Body
