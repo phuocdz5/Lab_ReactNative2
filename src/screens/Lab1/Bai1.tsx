@@ -1,13 +1,11 @@
-import { View, Text, Image, TouchableOpacity } from 'react-native'
-import React from 'react'
-import { HeaderComponent, RowComponent, SectionComponent } from '../../components'
 import { ArrowLeft2, User } from 'iconsax-react-native'
-import COLORS from '../../assets/colors/Colors'
-import { FONTFAMILY } from '../../../assets/fonts'
+import React from 'react'
+import { ContainerComponent, HeaderComponent, RowComponent, SectionComponent } from '../../components'
+import ButtonComponent from '../../components/ButtonComponent'
 
 const Bai1 = ({navigation}:any) => {
   return (
-    <View>
+    <ContainerComponent>
         <SectionComponent>
             <HeaderComponent 
                 leftChildrent={<ArrowLeft2 size="32" color="#FF8A65"/>}
@@ -21,12 +19,10 @@ const Bai1 = ({navigation}:any) => {
         </SectionComponent>
         <SectionComponent>
             <RowComponent justify='center'>
-                <TouchableOpacity onPress={()=>navigation.navigate('Lab1_Bai2')}>
-                    <Text style={{color:COLORS.HEX_BLACK,fontSize:20,fontFamily:FONTFAMILY.poppins_bold}}>Bài 2</Text>
-                </TouchableOpacity>
-            </RowComponent>
+                <ButtonComponent type='orange' text='Bài 2' onPress={()=>navigation.navigate('Lab1_Bai2')}/>
+            </RowComponent> 
         </SectionComponent>
-    </View>
+    </ContainerComponent>
   )
 }
 

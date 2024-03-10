@@ -1,6 +1,9 @@
-import { View, Text, Touchable, TouchableOpacity } from 'react-native'
-import React, { ReactNode } from 'react'
+import React, { ReactNode } from 'react';
+import { TouchableOpacity, View } from 'react-native';
 import { RowComponent } from '.';
+import { FONTFAMILY } from '../../assets/fonts';
+import COLORS from '../assets/colors/Colors';
+import TextComponent from './TextComponent';
 
 interface Props{
     leftChildrent?:ReactNode;
@@ -14,16 +17,16 @@ const HeaderComponent = (props:Props) => {
         <TouchableOpacity>
             {leftChildrent}
         </TouchableOpacity>
-        {text?(
-            <View>
-                <Text>{text}</Text>
+        {text&&(
+            <View style={{flex:1,alignItems:'center'}}>
+                <TextComponent color={COLORS.HEX_BLACK} text={text} font={FONTFAMILY.poppins_bold} />
             </View>
-        ):(<View></View>)}
+        )}
         {rightChildrent?(
             <TouchableOpacity>
                 {rightChildrent}
             </TouchableOpacity>
-        ):<View></View>}
+        ):<View style={{flex:0.1}}></View>}
     </RowComponent>
   )
 }

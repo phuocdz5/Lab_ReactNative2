@@ -1,12 +1,10 @@
-import { View, Text, ScrollView, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { CardComponent, RowComponent, SectionComponent } from '../../components'
-import COLORS from '../../assets/colors/Colors'
-import { FONTFAMILY } from '../../../assets/fonts'
+import { CardComponent, ContainerComponent, RowComponent, SectionComponent } from '../../components'
+import ButtonComponent from '../../components/ButtonComponent'
 
 const Bai2_Lab1 = ({navigation}:any) => {
   return (
-    <ScrollView>
+    <ContainerComponent isScroll>
         <SectionComponent>
             <CardComponent
                 title_1='Địa điểm'
@@ -33,12 +31,10 @@ const Bai2_Lab1 = ({navigation}:any) => {
         </SectionComponent>
         <SectionComponent>
             <RowComponent justify='center'>
-                <TouchableOpacity onPress={()=>navigation.navigate('Lab1_Bai3')}>
-                    <Text style={{color:COLORS.HEX_BLACK,fontSize:20,fontFamily:FONTFAMILY.poppins_bold}}>Bài 3</Text>
-                </TouchableOpacity>
+                <ButtonComponent type='orange' text='Bài 3' onPress={()=>navigation.navigate('Lab1_Bai3')}/>
             </RowComponent>
         </SectionComponent>
-    </ScrollView>
+    </ContainerComponent>
   )
 }
 

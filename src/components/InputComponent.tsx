@@ -1,7 +1,7 @@
-import { View, Text, StyleSheet, TextInput } from 'react-native'
-import React, { ReactNode, useEffect, useState } from 'react'
-import COLORS from '../assets/colors/Colors'
 import { ShieldCross } from 'iconsax-react-native';
+import React, { ReactNode, useState } from 'react';
+import { StyleSheet, TextInput, View } from 'react-native';
+import COLORS from '../assets/colors/Colors';
 
 interface Props{
     value:string,
