@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Alert, Button, Text, View } from 'react-native'
+import { Alert, View } from 'react-native'
+import { ButtonComponent, InputComponent, SectionComponent } from '../../components'
 import { User } from '../../models/User'
-import { ButtonComponent, ContainerComponent, InputComponent, SectionComponent } from '../../components'
 import { Validate } from '../../utils/validate'
 interface Props {
     onHandleUpdate: (data: User['data']) => void
