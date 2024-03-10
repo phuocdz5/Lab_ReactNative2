@@ -3,6 +3,7 @@ import { Alert, View } from 'react-native'
 import { ButtonComponent, InputComponent, SectionComponent } from '../../components'
 import { User } from '../../models/User'
 import { Validate } from '../../utils/validate'
+import COLORS from '../../assets/colors/Colors'
 interface Props {
     onHandleUpdate: (data: User['data']) => void
     onHandleChangeBGFooter: () => void
@@ -19,7 +20,7 @@ const Body = React.memo((props: Props) => {
         }
     }
     return (
-        <View style={{width:395}}>
+        <View style={{backgroundColor:COLORS.WHITE,flex:1}}  >
             <SectionComponent>
                 <InputComponent placeholder='Nhập tên của bạn' onChange={val => setName(val)} value={name} />
             </SectionComponent>

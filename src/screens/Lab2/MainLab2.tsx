@@ -5,6 +5,7 @@ import Body from './Body'
 import Footer from './Footer'
 import Header from './Header'
 import COLORS from '../../assets/colors/Colors'
+import { View } from 'react-native'
 
 const data = {
   name: "Chưa có tên",
@@ -39,11 +40,11 @@ const MainLab2 = () => {
     setLastTime(dateTime)
   }, [user])
   return (
-    <ContainerComponent  style={{position:'relative',flex:1,flexDirection:'row'}}>
+    <View  style={{position:'relative',flex:1}}>
       <Header data={user} />
       <Body onHandleChangeBGFooter={handleFooterColor} onHandleUpdate={onClickUpdate} />
       <Footer backgroundColor={footerColor} timeUpdate={lastTime} />
-    </ContainerComponent>
+    </View>
   )
 }
 
