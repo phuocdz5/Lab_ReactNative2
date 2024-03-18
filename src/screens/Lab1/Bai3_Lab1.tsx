@@ -19,16 +19,16 @@ const Bai3_Lab1 = ({navigation}:any) => {
   return (
     <ContainerComponent style={{marginTop:15}}>
         <SectionComponent>
-            <InputComponent message='' value={values.text1} placeholder='text1' onChange={val => handleChangeValue('text1',val)}/>
+            <InputComponent value={values.text1} placeholder='text1' onChange={val => handleChangeValue('text1',val)}/>
         </SectionComponent>
         <SectionComponent>
-            <InputComponent message='' value={values.text2} placeholder='text2' onChange={val => handleChangeValue('text2',val)}/>
+            <InputComponent value={values.text2} placeholder='text2' onChange={val => handleChangeValue('text2',val)}/>
         </SectionComponent>
         <SectionComponent>
-            <InputComponent message='' value={values.text3} placeholder='text3' onChange={val => handleChangeValue('text3',val)}/>
+            <InputComponent value={values.text3} placeholder='text3' onChange={val => handleChangeValue('text3',val)}/>
         </SectionComponent>
         <SectionComponent>
-            <InputComponent message='' value={values.text4} placeholder='text4' onChange={val => handleChangeValue('text4',val)}/>
+            <InputComponent value={values.text4} placeholder='text4' onChange={val => handleChangeValue('text4',val)}/>
         </SectionComponent>
         <SectionComponent>
             <RowComponent justify='center'>
