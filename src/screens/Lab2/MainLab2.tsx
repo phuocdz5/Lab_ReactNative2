@@ -20,6 +20,7 @@ const MainLab2 = () => {
     setUser(updatedUser);
   }, []);
   const handleFooterColor = useCallback(() => {
+
     const numbeRandom = Math.floor(Math.random() * colors.length)
     setFooterColor(colors[numbeRandom])
   }, [])

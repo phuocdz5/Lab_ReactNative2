@@ -15,5 +15,5 @@ export{
     InputComponent,
     ContainerComponent,
     TextComponent,
-    ButtonComponent
+    ButtonComponent,
 }

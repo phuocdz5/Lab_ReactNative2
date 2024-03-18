@@ -1,15 +1,16 @@
 import { NavigationContainer } from '@react-navigation/native'
 import React from 'react'
-import { StatusBar } from 'react-native'
-import AppRoute from './src/navigator/AppRoute'
+import { Lab1Navigator, Lab3Navigator } from './src/navigator'
+import { View } from 'react-native'
 
 const App = () => {
   return (
-    <>
-      <NavigationContainer>
-        <AppRoute />
-      </NavigationContainer>
-    </>
+
+    <NavigationContainer>
+      <Lab1Navigator/>
+      {/* <Lab2Navigator/> */}
+      {/* <Lab3Navigator /> */}
+    </NavigationContainer>
   )
 }
 

@@ -6,7 +6,7 @@ import { MainLab2 } from '../screens';
 const Lab2Navigator = () => {
     const Stack = createNativeStackNavigator();
   return (
-    <Stack.Navigator initialRouteName='Lab2' screenOptions={{headerShown:false}}>
+    <Stack.Navigator  screenOptions={{headerShown:false}}>
         <Stack.Screen name='Lab2' component={MainLab2}/>
     </Stack.Navigator>
   )
