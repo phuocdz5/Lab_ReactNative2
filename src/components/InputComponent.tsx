@@ -6,32 +6,35 @@ import COLORS from '../assets/colors/Colors';
 interface Props{
     value:string,
     onChange:(val:string)=>void,
+    affix?:ReactNode,
     placeholder?:string,
-    message:'',
     
 
 }
 const InputComponent = (props: Props) => {
-  const { value, onChange, placeholder,message } = props;
+  const { value, onChange, affix, placeholder } = props;
   const [isEmpty, setIsEmpty] = useState<boolean>(false); 
 
   const handleFocus = () => {
-    message!=''
+    setIsEmpty(value.trim() === ''); 
 };
 
-
+const handleChange = (val: string) => {
+    onChange(val);
+    setIsEmpty(val.trim() === '');
+};
   return (
     <View style={[styles.inputContainer,{borderColor:isEmpty?COLORS.RED:COLORS.HEX_LIGHT_GREY}]}>
+      {affix??affix}
       <TextInput
         style={styles.input}
         value={value}
-        onChangeText={(val)=>onChange(val)}
+        onChangeText={handleChange}
         placeholder={placeholder??''}
         onEndEditing={handleFocus}
        />
        {isEmpty?(<ShieldCross size="32" color="#FF8A65"/>):undefined}
     </View>
-  
     
     
   )
