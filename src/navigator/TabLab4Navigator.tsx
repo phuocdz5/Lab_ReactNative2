@@ -4,7 +4,7 @@ import React, { ReactNode } from 'react';
 import { FONTFAMILY } from '../../assets/fonts';
 import COLORS from '../assets/colors/Colors';
 import { TextComponent } from '../components';
-import { Bai1_2_Lab4 } from '../screens';
+import { Bai1_2_Lab4, Bai3_Lab4 } from '../screens';
 
 const TabLab4Navigator = () => {
     const Tab = createBottomTabNavigator();
@@ -27,7 +27,7 @@ const TabLab4Navigator = () => {
                     case 'Lab4_Bai1_2':
                         icon = <Home2 size={size} color={color} variant="Bold" />;
                         break;
-                    case 'Lab4_Bai2':
+                    case 'Lab4_Bai3':
                         icon = <Home2 size={size} color={color} variant="Bold" />
                         break;
                     
@@ -43,9 +43,8 @@ const TabLab4Navigator = () => {
                 return <TextComponent text={route.name} flex={0} size={12} color={focused ? COLORS.HEX_ORANGE : COLORS.HEX_LIGHT_GREY} font={FONTFAMILY.poppins_bold} />;
             },
         })}>
-            {/* <Tab.Screen name="Lab4_Bai1" component={Bai1_Lab3} /> */}
             <Tab.Screen name="Lab4_Bai1_2" component={Bai1_2_Lab4} />
-            {/* <Tab.Screen name="Lab4_Bai3" component={Bai3_Lab3} /> */}
+            <Tab.Screen name="Lab4_Bai3" component={Bai3_Lab4} />
         </Tab.Navigator>
     )
 
